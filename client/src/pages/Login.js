@@ -1,14 +1,15 @@
-import React from "react";
+import React  from "react";
 import "../styles/RegiserStyles.css";
 import { Form, Input, message } from "antd";
-import { Link, useNavigate } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
 import axios from "axios";
 import SignImg from "./SignImg";
 
 
+
 const Login = () => {
   const navigate = useNavigate();
-  //form handler
+  //form handlery
   const onfinishHandler = async (values) => {
     try {
       const res = await axios.post("/api/v1/user/login", values);
@@ -46,7 +47,7 @@ const Login = () => {
               <Link to="/register" className="m-2">
                 Not a user? Sign up!
               </Link>
-              <button className="btn btn-primary" type="submit">
+              <button className="btn btn-primary" type="submit" onClick={()=>navigate("/home")}>
                 Login
               </button>
             </Form>

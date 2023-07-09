@@ -46,7 +46,7 @@ const Register = () => {
               <Link to="/login" className="m-2">
                 Sign in
               </Link>
-              <button className="btn btn-primary" type="submit">
+              <button className="btn btn-primary" type="submit" onClick={()=>navigate("/login")}>
                 Register
               </button>
             </Form>
