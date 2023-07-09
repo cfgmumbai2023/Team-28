@@ -16,7 +16,7 @@ const Login = () => {
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
         message.success("Login Successfully");
-        navigate("/");
+        navigate("/home");
       } else {
         message.error(res.data.message);
       }
@@ -47,7 +47,7 @@ const Login = () => {
               <Link to="/register" className="m-2">
                 Not a user? Sign up!
               </Link>
-              <button className="btn btn-primary" type="submit" onClick={()=>navigate("/home")}>
+              <button className="btn btn-primary" type="submit">
                 Login
               </button>
             </Form>
